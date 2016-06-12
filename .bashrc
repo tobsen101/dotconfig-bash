@@ -115,3 +115,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# use short pwd in terminal
+if [ -f ~/. ]; then
+  export PROMPT_COMMAND='PS1="$(python ~/.short.pwd.py)"'
+fi
